@@ -21,11 +21,11 @@ body, .playlist-name, .app-chrome, .song-duration {
 /* Change #6: Why is there a max width on the song info???? just why?? stop it. get some help */	
 .app-chrome.chrome-bottom .song-name, .app-chrome.chrome-bottom .song-artist-album {	
     width: 100% !important; /* #4 */	
-    max-width: 100% !important; /* #4 */	
+    max-width: 100% !important; /* #4, #6 */	
     overflow: visible !important; /* #6 */	
     -webkit-mask-image: linear-gradient(-90deg, transparent 0px, transparent 7px, black 21px) !important; /* #3 */	
 }
-.app-chrome.chrome-bottom .audio-type + .song-artist-album, .app-chrome.chrome-bottom .song-name:nth-last-child(3), .app-chrome.chrome-bottom .song-name:nth-last-child(4), .app-chrome.chrome-bottom .song-name:nth-last-child(5) {	
+.app-chrome.chrome-bottom .audio-type + .song-artist-album, .app-chrome.chrome-bottom .song-name/*:nth-last-child(3), .app-chrome.chrome-bottom .song-name:nth-last-child(4), .app-chrome.chrome-bottom .song-name:nth-last-child(5)*/, .app-chrome.chrome-bottom .song-album {	
     width: calc(100% - 20px) !important; /* #4 */	
     -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 2px, black 16px) !important; /* #3, #5 */	
 }
@@ -33,16 +33,17 @@ body, .playlist-name, .app-chrome, .song-duration {
 /* Change #7: Reposition playback controls vertically */	
 .app-chrome.chrome-bottom .app-chrome-playback-controls {	
     position: relative !important; /* #7 */	
-    top: -4px !important; /* #7 */	
+    top: -23px !important; /* #7 */	
 }
-.app-chrome.chrome-bottom .app-chrome-playback-duration {	
+.app-chrome.chrome-bottom .app-chrome-playback-duration, .app-chrome-playback-duration-bottom {	
     position: relative !important; /* #7 */	
-    top: -3px !important; /* #7 */	
+    top: 53px !important; /* #7 */	
 }
 
 /* Change #8: Reposition song duration text vertically */	
-.app-chrome.chrome-bottom .song-duration p {	
-    top: 6px !important; /* #8 */	
+.app-chrome.chrome-bottom .app-chrome-playback-duration-bottom .col-sm-auto {	
+    position: relative !important;
+    top: -2px !important; /* #8 */
 }
 
 /* Change #9: Brighten the background */
@@ -79,6 +80,7 @@ body, .playlist-name, .app-chrome, .song-duration {
 }
 .search-input {
     background-color: rgba(100, 100, 100, 0.25) !important; /* #10 */
+    z-index: 9000 !important;
 }
 
 /* Change #11: Prevent other themes from changing the window controls style */

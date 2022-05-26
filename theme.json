@@ -1,0 +1,18 @@
+{
+    "name": "Cider QOL Changes",
+    "description": "A few Cider QOL changes",
+    "version": "1.0",
+    "author": "DecibillyJoel",
+    "github_repo": "DecibillyJoel/Cider-QOL-Changes",
+    "directives": {
+        "windowLayout": {
+            "value": "twopanel"
+        },
+        "lcdArtworkSize": {
+            "value": 100
+        },
+        "appNavigation": {
+            "value": "seperate"
+        }
+    }
+}

@@ -1,0 +1,50 @@
+/* Change #1: Changed the font to Inter */
+@fontA              : "Inter", system-ui;	
+@fontB              : "Inter", system-ui;
+
+/* Change #2: Fixed the bug where song info with a marquee breaks the line spacing */	
+.app-chrome.chrome-bottom .app-playback-controls {	
+    overflow: hidden !important; /* #2 */	
+}
+.app-chrome.chrome-bottom .playback-info {	
+    overflow-x: hidden !important; /* #4 */	
+    overflow-y: visible !important; /* #2 */	
+}
+.app-chrome.chrome-bottom .app-playback-controls:hover .marquee .song-artist {	
+    overflow: unset !important; /* #2 */	
+}
+
+/* Change #3: Made the song title / album+artist fade consistent regardless of window size, and generally made it nicer looking */	
+/* Change #4: Fixed the fade misrepresenting the actual size to the marquee logic (i.e. there was a sweet spot where resizing the window covered some of the text with the fade without marquee'ing /*	
+/* Change #5: Changed the positioning of the fade based on whether or not the CAP / spatializiation icon is present */	
+/* Change #6: Why is there a max width on the song info???? just why?? stop it. get some help */	
+.app-chrome.chrome-bottom .song-name, .app-chrome.chrome-bottom .song-artist-album {	
+    width: 100% !important; /* #4 */	
+    max-width: 100% !important; /* #4 */	
+    overflow: visible !important; /* #6 */	
+    -webkit-mask-image: linear-gradient(-90deg, transparent 0px, transparent 7px, black 21px) !important; /* #3 */	
+}
+.app-chrome.chrome-bottom .audio-type + .song-artist-album, .app-chrome.chrome-bottom .song-name:nth-last-child(3), .app-chrome.chrome-bottom .song-name:nth-last-child(4), .app-chrome.chrome-bottom .song-name:nth-last-child(5) {	
+    width: calc(100% - 20px) !important; /* #4 */	
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 2px, black 16px) !important; /* #3, #5 */	
+}
+
+/* Change #7: Reposition playback controls vertically */	
+.app-chrome.chrome-bottom .app-chrome-playback-controls {	
+    position: relative !important; /* #7 */	
+    top: -4px !important; /* #7 */	
+}
+.app-chrome.chrome-bottom .app-chrome-playback-duration {	
+    position: relative !important; /* #7 */	
+    top: -3px !important; /* #7 */	
+}
+
+/* Change #8: Reposition song duration text vertically */	
+.app-chrome.chrome-bottom .song-duration p {	
+    top: 6px !important; /* #8 */	
+}
+
+/* Change #9: Remove background dulling from some elements that don't need it */
+#app-content, .app-chrome.chrome-bottom {
+    background-color: unset; /* #9 */
+}

@@ -1,6 +1,6 @@
 A few QOL Cider changes, intended to enhance other themes, but may also be used by itself<br>
 <br>
-![image](https://user-images.githubusercontent.com/23534814/170405739-504df623-54c4-493f-9158-1e3e6a0695d8.png)<br>
+![image](https://user-images.githubusercontent.com/23534814/170427211-59aa80d4-2f1d-4614-9bca-92bc8885eb10.png)<br>
 <br>
 Change #1: Changed the font to Inter<br>
 Change #2: Fixed the bug where song info with a marquee breaks the line spacing<br>
@@ -17,4 +17,4 @@ Change #11: Prevent other themes from changing the window controls style<br>
 <br>
 I personally use this theme combined with [Cider Groovy Theme](https://github.com/booploops/CiderGroovyTheme) by [booploops](https://github.com/booploops), which ends up looking like this:<br>
 <br>
-![image](https://user-images.githubusercontent.com/23534814/170406478-99bb6e8b-2ac9-4421-b75f-b69c9b07eb96.png)
+![image](https://user-images.githubusercontent.com/23534814/170427761-f52f3353-96e5-4751-9435-08f00dee7cc9.png)

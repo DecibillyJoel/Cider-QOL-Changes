@@ -46,10 +46,44 @@
 
 /* Change #9: Brighten the background */
 #app {
-    --color1: rgba(15, 15, 15, 0.05);
-    --color2: rgba(30, 30, 30, 0.15);
-    
+    --color1: rgba(15, 15, 15, 0.05) !important; /* #9 */
+    --color2: rgba(30, 30, 30, 0.15) !important; /* #9 */
 }
 .list-group-item-dark {
-    background-color: rgba(45, 45, 45, 0.25);
+    background-color: rgba(45, 45, 45, 0.25) !important; /* #9 */
+}
+#navigation-bar {
+    background-color: rgba(0, 0, 0, 0.05) !important; /* #9 */
+}
+.window-controls {
+    background-color: rgba(0, 0, 0, 0.15) !important; /* #9 */
+}
+.window-controls > div:hover {
+    background-color: rgba(200, 200, 200, 0.2) !important; /* #9 */
+}
+.repo-header {
+    background-color: rgba(36, 36, 36, 0.4) !important; /* #9 */
+}
+#micaEffect {
+    filter: saturate(260%) brightness(0.9) !important;
+    opacity: 0.5 !important; /* #10 */
+}
+
+/* Change #10: Prevent other themes from dulling the background */
+#app-sidebar, .app-chrome.chrome-bottom {
+    background-color: var(--color1) !important; /* #10 */
+}
+#app-content {
+    background-color: var(--color2) !important; /* #10 */
+}
+.search-input {
+    background-color: rgba(100, 100, 100, 0.25) !important; /* #10 */
+}
+
+/* Change #11: Prevent other themes from changing the window controls style */
+.window-controls {
+    height: 100% !important;
+    position: unset !important;
+    right: unset !important;
+    top: unset !important;
 }

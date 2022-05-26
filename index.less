@@ -44,7 +44,12 @@
     top: 6px !important; /* #8 */	
 }
 
-/* Change #9: Remove background dulling from some elements that don't need it */
-#app-content, .app-chrome.chrome-bottom {
-    background-color: unset; /* #9 */
+/* Change #9: Brighten the background */
+#app {
+    --color1: rgba(15, 15, 15, 0.05);
+    --color2: rgba(30, 30, 30, 0.15);
+    
+}
+.list-group-item-dark {
+    background-color: rgba(45, 45, 45, 0.25);
 }

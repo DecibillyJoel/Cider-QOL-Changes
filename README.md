@@ -8,4 +8,4 @@ Change #5: Changed the positioning of the fade based on whether or not the CAP /
 Change #6: Removed max width on the song info<br>
 Change #7: Keep playback controls on bottom (in case another theme tries to move it) and readjust vertically<br>
 Change #8: Reposition song duration text vertically (goes in hand with #7)<br>
-Change #9: Remove background dulling from some elements that don't need it<br>
+Change #9: Brighten the background<br>

@@ -1,4 +1,4 @@
-A few QOL Cider changes<br>
+A few QOL Cider changes, intended to enhance other themes, but may also be used by itself<br>
 <br>
 ![image](https://user-images.githubusercontent.com/23534814/170405739-504df623-54c4-493f-9158-1e3e6a0695d8.png)<br>
 <br>
@@ -13,3 +13,8 @@ Change #8: Reposition song duration text vertically (goes in hand with #7)<br>
 Change #9: Brighten the background<br>
 Change #10: Prevent other themes from dulling the background<br>
 Change #11: Prevent other themes from changing the window controls style<br>
+<br>
+<br>
+I personally use this theme combined with [Cider Groovy Theme](https://github.com/booploops/CiderGroovyTheme) by [booploops](https://github.com/booploops), which ends up looking like this:<br>
+<br>
+![image](https://user-images.githubusercontent.com/23534814/170406478-99bb6e8b-2ac9-4421-b75f-b69c9b07eb96.png)

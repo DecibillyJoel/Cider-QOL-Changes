@@ -1,6 +1,6 @@
 A few QOL Cider changes, intended to enhance other themes, but may also be used by itself<br>
 <br>
-![image](https://user-images.githubusercontent.com/23534814/170427211-59aa80d4-2f1d-4614-9bca-92bc8885eb10.png)<br>
+![image](https://user-images.githubusercontent.com/23534814/170429583-568a1b55-b9bf-440f-ad19-6682f7571f78.png)<br>
 <br>
 Change #1: Changed the font to Inter<br>
 Change #2: Fixed the bug where song info with a marquee breaks the line spacing<br>

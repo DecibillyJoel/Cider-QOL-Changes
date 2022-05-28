@@ -14,4 +14,4 @@ Change #9: Prevented other themes from changing the window controls style<br>
 Change #10: Repositioned video controls vertically<br>
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/23534814/170808646-ef2a583b-2f02-42ae-a54a-d09fd964cfee.png)
+![image](https://user-images.githubusercontent.com/23534814/170808686-58527716-5403-40ef-b1cb-96216bbe7d07.png)

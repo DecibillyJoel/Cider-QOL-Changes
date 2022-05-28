@@ -11,6 +11,7 @@ Change #6: Repositioned song duration text vertically (goes in hand with #5)<br>
 Change #7: Brightened/sweetened the artwork/Mica background & improved artwork BG interactions with Mica and no-song state<br>
 Change #8: Prevented other themes from dulling the background<br>
 Change #9: Prevented other themes from changing the window controls style<br>
+Change #10: Repositioned video controls vertically<br>
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/23534814/170808242-6a93df92-7068-4653-8afe-8efb23e3ece2.png)

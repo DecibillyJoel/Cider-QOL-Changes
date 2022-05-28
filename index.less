@@ -1,92 +1,91 @@
 /* Change #1: Changed the font to Inter */
+@font-face {
+    font-family: "Inter";
+    src: url(Inter/Inter-VariableFont_slnt,wght.ttf);
+}
 body, .playlist-name, .app-chrome, .song-duration {
-    font-family: "Inter", system-ui !important;
+    font-family: "Inter" !important;
 }
 
-/* Change #2: Fixed the bug where song info with a marquee breaks the line spacing */	
-.app-chrome.chrome-bottom .app-playback-controls {	
-    overflow: hidden !important; /* #2 */	
+/* Change #2: Made the song info fade consistent regardless of window size, and generally made it nicer looking */	
+/* Change #3: Changed the positioning of the fade based on whether or not the CAP / spatializiation icon is present */	
+/* Change #4: Why is there a max width on the song info???? just why?? stop it. get some help */	
+.app-chrome.chrome-bottom .song-name, .app-chrome.chrome-bottom .song-artist, .app-chrome.chrome-bottom .song-album {	
+    width: 100% !important; /* #2 */
+    max-width: 100% !important; /* 2, #4 */
+    white-space: nowrap !important; /* #2 */
+    -webkit-mask-image: linear-gradient(-90deg, transparent 0px, transparent 7px, black 21px) !important; /* #2 */	
 }
-.app-chrome.chrome-bottom .playback-info {	
-    overflow-x: hidden !important; /* #4 */	
-    overflow-y: visible !important; /* #2 */	
-}
-.app-chrome.chrome-bottom .app-playback-controls:hover .marquee .song-artist {	
-    overflow: unset !important; /* #2 */	
-}
-
-/* Change #3: Made the song title / album+artist fade consistent regardless of window size, and generally made it nicer looking */	
-/* Change #4: Fixed the fade misrepresenting the actual size to the marquee logic (i.e. there was a sweet spot where resizing the window covered some of the text with the fade without marquee'ing /*	
-/* Change #5: Changed the positioning of the fade based on whether or not the CAP / spatializiation icon is present */	
-/* Change #6: Why is there a max width on the song info???? just why?? stop it. get some help */	
-.app-chrome.chrome-bottom .song-name, .app-chrome.chrome-bottom .song-artist-album {	
-    width: 100% !important; /* #4 */	
-    max-width: 100% !important; /* #4, #6 */	
-    overflow: visible !important; /* #6 */	
-    -webkit-mask-image: linear-gradient(-90deg, transparent 0px, transparent 7px, black 21px) !important; /* #3 */	
-}
-.app-chrome.chrome-bottom .audio-type + .song-artist-album, .app-chrome.chrome-bottom .song-name/*:nth-last-child(3), .app-chrome.chrome-bottom .song-name:nth-last-child(4), .app-chrome.chrome-bottom .song-name:nth-last-child(5)*/, .app-chrome.chrome-bottom .song-album {	
-    width: calc(100% - 20px) !important; /* #4 */	
-    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 2px, black 16px) !important; /* #3, #5 */	
+.app-chrome.chrome-bottom .song-name:nth-last-child(1n+4), .app-chrome.chrome-bottom .song-artist:nth-last-child(1n+3), .app-chrome.chrome-bottom .song-album:nth-last-child(1n+2) {	
+     width: calc(100% - 20px) !important; /* #3 */	
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 2px, black 16px) !important; /* #2, #3 */	
 }
 
-/* Change #7: Reposition playback controls vertically */	
+/* Change #5: Reposition playback controls vertically */	
 .app-chrome.chrome-bottom .app-chrome-playback-controls {	
-    position: relative !important; /* #7 */	
-    top: -23px !important; /* #7 */	
+    position: relative !important; /* #5 */	
+    top: -23px !important; /* #5 */	
 }
 .app-chrome.chrome-bottom .app-chrome-playback-duration, .app-chrome-playback-duration-bottom {	
-    position: relative !important; /* #7 */	
-    top: 53px !important; /* #7 */	
+    position: relative !important; /* #5 */	
+    top: 53px !important; /* #5 */	
 }
 
-/* Change #8: Reposition song duration text vertically */	
+/* Change #6: Reposition song duration text vertically */	
 .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom .col-sm-auto {	
-    position: relative !important;
-    top: -2px !important; /* #8 */
+    position: relative !important; /* #6 */
+    top: -2px !important; /* #6 */
 }
 
-/* Change #9: Brighten the background */
+/* Change #7: Brighten the background */
 #app {
-    --color1: rgba(15, 15, 15, 0.05) !important; /* #9 */
-    --color2: rgba(30, 30, 30, 0.15) !important; /* #9 */
+    --panelColor1: rgba(15, 15, 15, 0.05) !important; /* #7 */
+    --panelColor2: rgba(30, 30, 30, 0.15) !important; /* #7 */
 }
-.list-group-item-dark {
-    background-color: rgba(45, 45, 45, 0.25) !important; /* #9 */
-}
-#navigation-bar {
-    background-color: rgba(0, 0, 0, 0.05) !important; /* #9 */
-}
-.window-controls {
-    background-color: rgba(0, 0, 0, 0.15) !important; /* #9 */
-}
-.window-controls > div:hover {
-    background-color: rgba(200, 200, 200, 0.2) !important; /* #9 */
-}
-.repo-header {
-    background-color: rgba(36, 36, 36, 0.4) !important; /* #9 */
+#app-main {
+    background-color: transparent !important; /* #7 */
 }
 #micaEffect {
-    filter: saturate(260%) brightness(0.9) !important;
-    opacity: 0.5 !important; /* #10 */
+    filter: saturate(270%) brightness(0.55) !important; /* #7 */
+    opacity: 1 !important; /* #8 */
 }
-
-/* Change #10: Prevent other themes from dulling the background */
-#app-sidebar, .app-chrome.chrome-bottom {
-    background-color: var(--color1) !important; /* #10 */
+.list-group-item-dark {
+    background-color: rgba(45, 45, 45, 0.25) !important; /* #7 */
 }
-#app-content {
-    background-color: var(--color2) !important; /* #10 */
+#navigation-bar {
+    background-color: rgba(0, 0, 0, 0.05) !important; /* #7 */
+}
+.window-controls {
+    background-color: rgba(0, 0, 0, 0.15) !important; /* #7 */
+}
+.window-controls > div:hover {
+    background-color: rgba(200, 200, 200, 0.2) !important; /* #7 */
+}
+.repo-header {
+    background-color: rgba(36, 36, 36, 0.4) !important; /* #7 */
 }
 .search-input {
-    background-color: rgba(100, 100, 100, 0.25) !important; /* #10 */
-    z-index: 9000 !important;
+    background-color: rgba(120, 120, 120, 0.35) !important; /* #7 */
+}
+.search-input::placeholder {
+    color: rgb(175, 175, 175) !important; /* #7 */
+}
+.search-input--icon {
+    opacity: 0.6 !important;
 }
 
-/* Change #11: Prevent other themes from changing the window controls style */
+/* Change #8: Prevent other themes from dulling the background */
+#app-sidebar, .app-chrome.chrome-bottom {
+    background-color: var(--panelColor1) !important; /* #8 */
+}
+#app-content {
+    background-color: var(--panelColor2) !important; /* #8 */
+}
+
+/* Change #9: Prevent other themes from changing the window controls style */
 .window-controls {
-    height: 100% !important;
-    position: unset !important;
-    right: unset !important;
-    top: unset !important;
+    height: 100% !important; /* #9 */
+    position: unset !important; /* #9 */
+    right: unset !important; /* #9 */
+    top: unset !important; /* #9 */
 }

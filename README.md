@@ -1,6 +1,6 @@
 A few QOL Cider changes, intended to make Cider feel smoother and sweeter (especially with Mica or Artwork BGs)<br>
 <br>
-![image](https://user-images.githubusercontent.com/23534814/170808090-807bc0bb-4d4a-46d0-9f35-d3c38bebae43.png)
+![image](https://user-images.githubusercontent.com/23534814/170810208-0aa54fc8-7b79-4271-892c-d1fd6afee7af.png)
 <br>
 <br>
 Change #1: Changed the font to Inter (font now included with the theme)<br>
@@ -15,4 +15,4 @@ Change #9: Prevented other themes from changing the window controls style<br>
 Change #10: Repositioned video controls vertically<br>
 <br>
 <br>
-![image](https://user-images.githubusercontent.com/23534814/170808686-58527716-5403-40ef-b1cb-96216bbe7d07.png)
+![image](https://user-images.githubusercontent.com/23534814/170810323-ade3d173-ce11-4070-b1be-ad7e122a3180.png)

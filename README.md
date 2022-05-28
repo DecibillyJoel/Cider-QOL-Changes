@@ -2,6 +2,7 @@ A few QOL Cider changes, intended to make Cider feel smoother and sweeter (espec
 <br>
 ![image](https://user-images.githubusercontent.com/23534814/170808090-807bc0bb-4d4a-46d0-9f35-d3c38bebae43.png)
 <br>
+<br>
 Change #1: Changed the font to Inter (font now included with the theme)<br>
 Change #2: Made the song info fade consistent regardless of window size, and generally made it nicer looking<br>
 Change #3: Changed the positioning of the fade based on whether or not the CAP / spatializiation icon is present<br>

@@ -34,7 +34,7 @@ body, .playlist-name, .app-chrome, .song-duration {
 /* Change #6: Reposition song duration text vertically */	
 .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom .col-sm-auto {	
     position: relative !important; /* #6 */
-    top: -2px !important; /* #6 */
+    top: -0.5px !important; /* #6 */
 }
 
 /* Change #7: Brighten the background & (try to) fix weird artwork interactions with Mica and no-song state */
@@ -52,6 +52,9 @@ body, .playlist-name, .app-chrome, .song-duration {
 }
 .bg-artwork-container {
     filter: saturate(270%) brightness(53%) blur(90px) contrast(150%) !important; /* #7 */
+}
+.fullscreen-view-container .bg-artwork-container {
+    filter: saturate(270%) grayscale(30%) blur(100px) contrast(150%) !important; /* #7 */
 }
 .bg-artwork--placeholder {
     z-index: -3 !important; /* #7 */

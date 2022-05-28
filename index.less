@@ -39,8 +39,8 @@ body, .playlist-name, .app-chrome, .song-duration {
 
 /* Change #7: Brighten the background & (try to) fix weird artwork interactions with Mica and no-song state */
 #app {
-    --panelColor1: rgba(15, 15, 15, 0.05) !important; /* #7 */
-    --panelColor2: rgba(30, 30, 30, 0.15) !important; /* #7 */
+    --panelColor1: rgba(20, 20, 20, 0.05) !important; /* #7 */
+    --panelColor2: rgba(25, 25, 25, 0.175) !important; /* #7 */
 }
 #app-main, .app-navigation {
     background-color: transparent !important; /* #7 */
@@ -67,7 +67,7 @@ body, .playlist-name, .app-chrome, .song-duration {
 #navigation-bar {
     background-color: rgba(0, 0, 0, 0.05) !important; /* #7 */
 }
-.window-controls {
+.library-header {
     background-color: rgba(0, 0, 0, 0.15) !important; /* #7 */
 }
 .window-controls > div:hover {
@@ -83,11 +83,14 @@ body, .playlist-name, .app-chrome, .song-duration {
     color: rgb(175, 175, 175) !important; /* #7 */
 }
 .search-input--icon {
-    opacity: 0.6 !important;
+    opacity: 0.6 !important; /* #7 */
+}
+.app-chrome.chrome-bottom {
+    background-color: var(--baseColorMix) !important; /* #7 */
 }
 
 /* Change #8: Prevent other themes from dulling the background */
-#app-sidebar, .app-chrome.chrome-bottom {
+#app-sidebar,  {
     background-color: var(--panelColor1) !important; /* #8 */
 }
 #app-content {

@@ -112,18 +112,3 @@ body, .playlist-name, .app-chrome, .song-duration {
 #apple-music-video-container .playback-info {
     bottom: 46px !important; /* #10 */
 }
-
-/* Change #11: Improve and hasten the lyrics animation */
-.lyric-line.active, .lyric-line.active .verse.verse-active {
-    opacity: 1 !important; /* #11 */
-    animation: unset !important; /* #11 */
-}
-.lyric-line.active {
-    transition: opacity 0.35s var(--appleEase), transform 0.2s var(--appleEase) !important; /* #11 */
-}
-.lyric-line.active .verse {
-    transition: unset !important; /* #11 */
-}
-.lyric-line.active .verse.verse-active {
-    transition: opacity 0.35s var(--appleEase) !important; /* #11 */
-}

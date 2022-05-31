@@ -112,3 +112,9 @@ body, .playlist-name, .app-chrome, .song-duration {
 #apple-music-video-container .playback-info {
     bottom: 46px !important; /* #10 */
 }
+
+/* Change #11: Undo the lyrics animation change */
+.lyric-line.active, .lyric-line.active .verse.verse-active {
+    opacity: 1 !important; /* #11 */
+    animation: unset !important; /* #11 */
+}

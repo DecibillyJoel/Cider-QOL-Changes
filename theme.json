@@ -11,5 +11,12 @@
         "lcdArtworkSize": {
             "value": 100
         }
-    }
+    },
+    "pack": [
+        {
+            "name": "Blurrier/Smoother Background",
+            "description": "Makes the background blurrier/smoother, resulting in a more uniform color",
+            "file": "blurry_bg.less"
+        }
+    ]
 }

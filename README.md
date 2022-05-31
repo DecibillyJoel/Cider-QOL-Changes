@@ -13,7 +13,7 @@ Change #7: Brightened/sweetened the artwork/Mica background & improved artwork B
 Change #8: Prevented other themes from dulling the background<br>
 Change #9: Prevented other themes from changing the window controls style<br>
 Change #10: Repositioned video controls vertically<br>
-Change #11: Undo the lyrics animation change<br>
+Change #11: Improve and hasten the lyrics animation<br>
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/23534814/170810323-ade3d173-ce11-4070-b1be-ad7e122a3180.png)

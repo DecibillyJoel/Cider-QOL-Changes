@@ -14,9 +14,16 @@
     },
     "pack": [
         {
-            "name": "Blurrier/Smoother Background",
+            "name": "Cider QOL Changes: Alt BG #1 (Blurrier/Smoother/Frostier)",
             "description": "Makes the background blurrier/smoother, resulting in a more uniform color",
             "file": "blurry_bg.less"
+        },
+        {
+            "name": "Cider QOL Changes: Alt BG #2 (Darker/Duller/Layered)",
+            "description": "Makes the background darker/duller, resulting in a more distinct background",
+            "file": "clear_bg.less"
         }
-    ]
+    ],
+    "id": 496435838,
+    "commit": "31b52210ed12cb2e03d129885b793babac99a84b"
 }

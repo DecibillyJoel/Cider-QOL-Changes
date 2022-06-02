@@ -1,46 +1,52 @@
 html, body, :root, div#app {
     --panelColor1: rgba(25, 25, 25, 0.035); /* */
     --panelColor2: rgba(22, 22, 22, 0.070); /* */
+    --color1: var(--panelColor1);
+    --color2: var(--panelColor2);
     --textColor: white;
-     font-weight: 100; /* */
+     color: var(--textColor);
 }
 
 * {
-    text-shadow: 1.5px 1.5px black;
-    text-rendering: geometricPrecision;
+    text-shadow: 1.15px 0px 1.15px rgba(0, 0, 0, 0.8), 0px 1.15px 1.15px rgba(0, 0, 0, 0.8), -1.15px 0px 1.15px rgba(0, 0, 0, 0.8), 0px -1.15px 1.15px rgba(0, 0, 0, 0.8), 1.15px 1.15px 1.15px rgba(0, 0, 0, 0.8), 1.15px -1.15px 1.15px rgba(0, 0, 0, 0.8), -1.15px 1.15px 1.15px rgba(0, 0, 0, 0.8), -1.15px -1.15px 1.15px rgba(0, 0, 0, 0.8); /* */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+.artist, .title, .artist > .item-navigate, .title > .item-navigate, .song-name, .song-artist, .song-album {
+    overflow-y: visible;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.artist::-webkit-scrollbar, .title::-webkit-scrollbar, .artist > .item-navigate::-webkit-scrollbar, .title > .item-navigate::-webkit-scrollbar {
+    display: none;
+}
+.explicit-icon {
+    margin-left: 3px !important;
+    flex-shrink: 0;
 }
 img, svg {
-    text-rendering: unset;
+    text-rendering: geometricPrecision;
 }
 svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chrome-bottom) > .app-chrome--left > div, .app-chrome .app-chrome-item > .app-playback-controls > div:not(.playback-info), .volume-button--small, .volume-button--small + input, .app-chrome--right .generic, .playback-info > .chrome-icon-container {
-    filter: contrast(120%) brightness(200%) drop-shadow(1.5px 1.5px black);
+    filter: contrast(120%) brightness(200%) drop-shadow(0px 1.2px 1.2px black) drop-shadow(1.2px 1.2px 1.2px black);
 }
 .app-chrome-playback-controls {
-    filter: contrast(120%) drop-shadow(1.5px 1.5px black);
+    filter: contrast(120%) drop-shadow(0px 1.2px 1.2px black) drop-shadow(1.2px 1.2px 1.2px black);
 }
 .app-chrome .app-chrome-item > .app-playback-controls > div#artworkLCD {
-    filter: drop-shadow(2.2px 2.2px 1.1px black);
+    filter: drop-shadow(1.15px 1.15px 1.15px black);
 }
-.content-inner .cd-mediaitem-square:not(.mediaitem-card), .app-sidebar-content {
-    filter: drop-shadow(1.2px 1.2px 0.7px rgba(0, 0, 0, 0.5));
-}
-.content-inner .cd-mediaitem-square:not(.mediaitem-card) .artwork-container {
-    filter: drop-shadow(1.4px 1.4px 1px black);
+.content-inner .cd-mediaitem-square:not(.mediaitem-card) .artwork-container, .app-chrome:not(.chrome-bottom) > .app-chrome--left > div.full-height, .well .artwork:not(.artwork-container > .artwork) {
+    filter: drop-shadow(2px 2px 2px black);
 }
 .well {
     background-color: var(--color2);
 }
-.content-inner:not(.home-page) > div {
+.content-inner:not(.home-page) > div:not(:empty) {
     background-color: var(--color2);
     border-radius: 10px;
     margin: var(--contentInnerPadding);
     padding: var(--contentInnerPadding);
-}
-.well * {
-    text-shadow: 1.3px 2.2px black; /* */
-}
-.well .artwork, .well .info-rect {
-    filter: drop-shadow(1.5px 1.5px 1.4px rgba(0, 0, 0, 0.75));
 }
 .cd-mediaitem-list-item .subtitle, .cd-mediaitem-square .subtitle {
     opacity: 0.82;
@@ -71,9 +77,18 @@ svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chro
     color: var(--textColor);
     opacity: 1;
 }
+.cd-btn-seeall {
+    filter: saturate(150%) contrast(80%) brightness(200%);
+}
+.home-page .md-btn-replay {
+    filter: saturate(130%) contrast(125%) brightness(105%);
+}
+.installed-themes-page .themeContextMenu {
+    filter: saturate(120%) contrast(90%) brightness(150%);
+}
 
 #micaEffect {
-    filter: brightness(95%);
+    filter: brightness(95%) saturate(190%) contrast(130%);
 }
 .bg-artwork-container {
     filter: brightness(95%);
@@ -83,5 +98,5 @@ svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chro
     transform: scale(108%, 108%);
 }
 .bg-artwork, .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork, .app-drawer .bgArtworkMaterial .bg-artwork-container .bg-artwork {
-    filter: brightness(100%) blur(180px) saturate(190%) contrast(130%);
+    filter: blur(180px) saturate(190%) contrast(130%);
 }

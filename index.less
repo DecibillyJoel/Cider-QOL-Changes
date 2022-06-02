@@ -3,115 +3,162 @@
     font-family: "Inter";
     src: url(Inter/Inter-VariableFont_slnt,wght.ttf);
 }
-body, .playlist-name, .app-chrome, .song-duration {
-    font-family: "Inter", "Pretendard Variable", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+html, body, :root, div#app, .lyric-body, .lyrics-translation, div#captions {
+    --QOLfont: "Inter", "Pretendard Variable", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* #1 */
+    font-family: var(--QOLfont); /* #1 */
+    --bs-font-sans-serif: var(--QOLfont); /* #1 */
+    --bs-font-monospace: var(--QOLfont); /* #1 */
+    --keyColor: #fc3c44; /* #8 */
+    --keyColor-primary: #ff2b52a6; /* #8 */
 }
+
 
 /* Change #2: Made the song info fade consistent regardless of window size, and generally made it nicer looking */	
 /* Change #3: Changed the positioning of the fade based on whether or not the CAP / spatializiation icon is present */	
 /* Change #4: Why is there a max width on the song info???? just why?? stop it. get some help */	
-.app-chrome.chrome-bottom .song-name, .app-chrome.chrome-bottom .song-artist, .app-chrome.chrome-bottom .song-album {	
-    width: 100% !important; /* #2 */
-    max-width: 100% !important; /* 2, #4 */
-    white-space: nowrap !important; /* #2 */
-    -webkit-mask-image: linear-gradient(-90deg, transparent 0px, transparent 7px, black 21px) !important; /* #2 */	
+#app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-name,
+.app-chrome.chrome-bottom .song-artist, 
+.app-chrome.chrome-bottom .song-album {	
+    width: 100%; /* #2 */
+    max-width: 100%; /* 2, #4 */
+    white-space: nowrap; /* #2 */
+    -webkit-mask-image: linear-gradient(-90deg, transparent 0px, transparent 7px, black 21px); /* #2 */	
 }
-.app-chrome.chrome-bottom .song-name:nth-last-child(1n+4), .app-chrome.chrome-bottom .song-artist:nth-last-child(1n+3), .app-chrome.chrome-bottom .song-album:nth-last-child(1n+2) {	
-     width: calc(100% - 20px) !important; /* #3 */	
-    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 2px, black 16px) !important; /* #2, #3 */	
+#app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-name:where(:nth-last-child(1n+4)),
+.app-chrome.chrome-bottom .song-artist:where(:nth-last-child(1n+3)),
+.app-chrome.chrome-bottom .song-album:where(:nth-last-child(1n+2)) {	
+     width: calc(100% - 20px); /* #3 */	
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 2px, black 16px); /* #2, #3 */	
 }
+
 
 /* Change #5: Reposition playback controls vertically */	
 .app-chrome.chrome-bottom .app-chrome-playback-controls {	
-    position: relative !important; /* #5 */	
-    top: -23px !important; /* #5 */	
+    position: relative; /* #5 */	
+    top: -23px; /* #5 */	
 }
-.app-chrome.chrome-bottom .app-chrome-playback-duration, .app-chrome-playback-duration-bottom {	
-    position: relative !important; /* #5 */	
-    top: 53px !important; /* #5 */	
+.app-chrome-playback-duration-bottom {	
+    position: relative; /* #5 */	
+    top: 53px; /* #5 */	
 }
 
 /* Change #6: Reposition song duration text vertically */	
-.app-chrome.chrome-bottom .app-chrome-playback-duration-bottom .col-sm-auto {	
-    position: relative !important; /* #6 */
-    top: -0.5px !important; /* #6 */
+#app.twopanel .app-chrome.chrome-bottom .app-chrome-playback-duration-bottom .col-sm-auto {	
+    position: relative; /* #6 */
+    top: -0.5px; /* #6 */
 }
 
+
 /* Change #7: Brighten the background & (try to) fix weird artwork interactions with Mica and no-song state */
-#app {
-    --panelColor1: rgba(20, 20, 20, 0.05) !important; /* #7 */
-    --panelColor2: rgba(25, 25, 25, 0.175) !important; /* #7 */
+html, body, :root, div#app {
+    --panelColor1: rgba(20, 20, 20, 0.05); /* #7 */
+    --panelColor2: rgba(25, 25, 25, 0.175); /* #7 */
+    --color1: var(--panelColor1); /* #7 */
+    --color2: var(--panelColor2); /* #7 */
+    --color3: rgba(0, 0, 0, 0.2); /* #8 */
+    --bgColor: transparent; /* #8 */
+    --baseColor: #1e1e1e; /* #8 */
+    --baseColorMix: rgba(30, 30, 30, 0.5); /* #8 */
+    --sidebarColor: #2e2e2e; /* #8 */
+    --sidebarColorMix: rgba(46, 46, 46, 0.5); /* #8 */
+    --ciderColor: #ff2654; /* #8 */
+    background: transparent; /* #8 */
+    color: var(--textColor); /* #8 */
 }
 #app-main, .app-navigation {
-    background-color: transparent !important; /* #7 */
+    background-color: transparent; /* #7 */
 }
 #micaEffect {
-    filter: saturate(300%) brightness(53%) contrast(130%) !important; /* #7 */
-    transform: scale(108%, 108%) !important; /* #7 */
-    opacity: 1 !important; /* #8 */
+    filter: saturate(300%) brightness(53%) contrast(130%); /* #7 */
+    transform: scale(108%, 108%); /* #7 */
+    opacity: 1; /* #8 */
     z-index: -3 !important; /* #7 */
 }
 .bg-artwork-container {
-    filter: saturate(270%) brightness(53%) blur(90px) contrast(150%) !important; /* #7 */
-    transform: scale(108%, 108%) !important; /* #7 */
+    filter: saturate(300%) brightness(53%) blur(90px) contrast(150%); /* #7 */
+    transform: scale(108%, 108%); /* #7 */
 }
 .fullscreen-view-container .bg-artwork-container, .modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container {
-    filter: saturate(270%) grayscale(30%) brightness(90%) blur(100px) contrast(150%) !important; /* #7 */
-    transform: scale(108%, 108%) !important; /* #7 */
+    filter: saturate(270%) grayscale(30%) brightness(90%) blur(100px) contrast(150%); /* #7 */
+    transform: scale(108%, 108%); /* #7 */
 }
 .bg-artwork--placeholder {
-    z-index: -3 !important; /* #7 */
-    opacity: 1 !important; /* #7, #8 */
-    background-color: var(--baseColor) !important; /* #7 */
+    z-index: -3; /* #7 */
+    opacity: 1; /* #7, #8 */
+    background-color: var(--baseColor); /* #7 */
 }
 .bg-artwork-container + .bg-artwork--placeholder {
     z-index: -2 !important; /* #7 */
 }
 .list-group-item-dark {
-    background-color: rgba(45, 45, 45, 0.25) !important; /* #7 */
+    background-color: rgba(45, 45, 45, 0.25); /* #7 */
 }
-#navigation-bar {
-    background-color: rgba(0, 0, 0, 0.05) !important; /* #7 */
+.installed-themes-page .list-group-item.addon, .installed-plugins-page .list-group-item.addon {
+    background-color: rgba(105, 105, 105, 0.25); /* #7 */
 }
-.library-header {
-    background-color: rgba(0, 0, 0, 0.15) !important; /* #7 */
+.installed-themes-page .list-group-item.applied, .installed-plugins-page .list-group-item.applied {
+    background-color: rgba(250, 90, 90, 0.4); /* #7 */
 }
-.window-controls > div:hover {
+.installed-themes-page .list-group-item.addon.applied, .installed-plugins-page .list-group-item.applied {
+    background-color: rgba(220, 80, 80, 0.3); /* #7 */
+}
+.library-page .library-header {
+    background-color: rgba(0, 0, 0, 0.15); /* #7 */
+}
+.app-chrome .app-chrome-item > .window-controls > div:hover {
     background-color: rgba(200, 200, 200, 0.2) !important; /* #7 */
 }
-.repo-header {
-    background-color: rgba(36, 36, 36, 0.4) !important; /* #7 */
+.installed-themes-page .repo-header, .installed-plugins-page .list-group-item.applied {
+    background-color: rgba(36, 36, 36, 0.4); /* #7 */
 }
 .search-input {
-    background-color: rgba(120, 120, 120, 0.35) !important; /* #7 */
+    background-color: rgba(120, 120, 120, 0.35); /* #7 */
 }
 .search-input::placeholder {
-    color: rgb(175, 175, 175) !important; /* #7 */
+    color: rgb(175, 175, 175); /* #7 */
 }
 .search-input--icon {
-    opacity: 0.6 !important; /* #7 */
+    opacity: 0.6; /* #7 */
 }
-.app-drawer, .app-chrome.chrome-bottom {
-    background-color: var(--baseColorMix) !important; /* #7 */
+.app-drawer, #app.twopanel .app-chrome.chrome-bottom {
+    background-color: var(--baseColorMix); /* #7 */
 }
 
-/* Change #8: Prevent other themes from dulling the background */
+
+/* Change #8: Prevent other themes from dulling the background or messing up the colors */
 #app-sidebar {
-    background-color: var(--panelColor1) !important; /* #8 */
+    background-color: var(--panelColor1); /* #8 */
 }
-#app-content {
-    background-color: var(--panelColor2) !important; /* #8 */
+#app-content, .installed-themes-page .style-editor-container, .github-themes-page .github-preview, .app-sidebar-footer.collapseTab > button {
+    background-color: var(--panelColor2); /* #8 */
 }
+
 
 /* Change #9: Prevent other themes from changing the window controls style */
-.window-controls {
-    height: 100% !important; /* #9 */
-    position: unset !important; /* #9 */
-    right: unset !important; /* #9 */
-    top: unset !important; /* #9 */
+.app-chrome .app-chrome-item > .window-controls {
+    height: 100%; /* #9 */
+    position: unset; /* #9 */
+    right: unset; /* #9 */
+    top: unset; /* #9 */
 }
 
-/* Change #10: Reposition video controls vertically */
-#apple-music-video-container .playback-info {
-    bottom: 46px !important; /* #10 */
+
+/* Change #10: Fix the search hints transparency and positioning */
+.search-hints-container .search-hints {
+    background-color: #1e1e1ecf; /* #10 */
+}
+.search-hints-container {
+    left: calc(-10px - (var(--sidebarWidth) - 20px)*0.125); /* #10 */
+}
+
+
+/* Change #11: Fix the playlist name/description edit positioning and size */
+.nameEdit {
+    margin-bottom: -6px; /* #11 */
+}
+.descriptionEdit {
+    margin-top: -6px; /* #11 */
+}
+.playlist-page .playlist-display .playlistInfo .playlist-info .nameEdit, .playlist-page .playlist-display .playlistInfo .playlist-info .descriptionEdit, .playlist-desc > div {
+    width: 100%; /* #11 */
 }

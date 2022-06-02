@@ -22,8 +22,11 @@
             "name": "Cider QOL Changes: Alt BG #2 (Darker/Duller/Layered)",
             "description": "Makes the background darker/duller, resulting in a more distinct background",
             "file": "clear_bg.less"
+        },
+        {
+            "name": "Cider QOL Changes: Alt BG #3 (Theme-Colored Tint)",
+            "description": "Makes the background tinted in your theme's colors",
+            "file": "themecolored_bg.less"
         }
-    ],
-    "id": 496435838,
-    "commit": "31b52210ed12cb2e03d129885b793babac99a84b"
+    ]
 }

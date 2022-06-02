@@ -1,0 +1,25 @@
+div#app:not(.simplebg) {
+    background: transparent;
+}
+
+div#app:not(.simplebg):before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--keyColor);
+    opacity: 1;
+    filter: saturate(275%) brightness(70%) blur(10000px);
+}
+
+div#app:not(.simplebg):after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color1);
+    opacity: 0.5;
+    filter: saturate(275%) brightness(50%) blur(10000px);
+}

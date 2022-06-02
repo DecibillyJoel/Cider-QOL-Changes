@@ -7,12 +7,12 @@ html, body, :root, div#app {
      color: var(--textColor);
 }
 
-* {
-    text-shadow: 1.15px 0px 1.15px rgba(0, 0, 0, 0.8), 0px 1.15px 1.15px rgba(0, 0, 0, 0.8), -1.15px 0px 1.15px rgba(0, 0, 0, 0.8), 0px -1.15px 1.15px rgba(0, 0, 0, 0.8), 1.15px 1.15px 1.15px rgba(0, 0, 0, 0.8), 1.15px -1.15px 1.15px rgba(0, 0, 0, 0.8), -1.15px 1.15px 1.15px rgba(0, 0, 0, 0.8), -1.15px -1.15px 1.15px rgba(0, 0, 0, 0.8); /* */
+*:not(.close) {
+    text-shadow: 1.15px 0px 1.1px rgba(0, 0, 0, 0.8), 0px 1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px 0px 1.1px rgba(0, 0, 0, 0.8), 0px -1.15px 1.1px rgba(0, 0, 0, 0.8), 1.15px 1.15px 1.1px rgba(0, 0, 0, 0.8), 1.15px -1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px 1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px -1.15px 1.1px rgba(0, 0, 0, 0.8); /* */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: subpixel-antialiased;
 }
-.artist, .title, .artist > .item-navigate, .title > .item-navigate, .song-name, .song-artist, .song-album {
+.artist, .title, .artist > .item-navigate, .title > .item-navigate, .song-name, .song-artist, .song-album, .repo-name {
     overflow-y: visible;
     padding-left: 1px;
     padding-right: 1px;
@@ -28,13 +28,13 @@ img, svg {
     text-rendering: geometricPrecision;
 }
 svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chrome-bottom) > .app-chrome--left > div, .app-chrome .app-chrome-item > .app-playback-controls > div:not(.playback-info), .volume-button--small, .volume-button--small + input, .app-chrome--right .generic, .playback-info > .chrome-icon-container {
-    filter: contrast(120%) brightness(200%) drop-shadow(0px 1.2px 1.2px black) drop-shadow(1.2px 1.2px 1.2px black);
+    filter: contrast(120%) brightness(200%) drop-shadow(0px 1.2px 1.1px black) drop-shadow(1.2px 1.2px 1.1px black);
 }
 .app-chrome-playback-controls {
-    filter: contrast(120%) drop-shadow(0px 1.2px 1.2px black) drop-shadow(1.2px 1.2px 1.2px black);
+    filter: contrast(120%) drop-shadow(0px 1.2px 1.1px black) drop-shadow(1.2px 1.2px 1.1px black);
 }
 .app-chrome .app-chrome-item > .app-playback-controls > div#artworkLCD {
-    filter: drop-shadow(1.15px 1.15px 1.15px black);
+    filter: drop-shadow(1.15px 1.15px 1.1px black);
 }
 .content-inner .cd-mediaitem-square:not(.mediaitem-card) .artwork-container, .app-chrome:not(.chrome-bottom) > .app-chrome--left > div.full-height, .well .artwork:not(.artwork-container > .artwork) {
     filter: drop-shadow(2px 2px 2px black);

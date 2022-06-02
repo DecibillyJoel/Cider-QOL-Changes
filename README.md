@@ -1,6 +1,4 @@
 A few QOL Cider changes, intended to make Cider feel smoother and sweeter (especially with *Mica* or *Artwork BGs*, or *another theme combined with Alt BG #3*)<br>
-Includes 2 alternate background styles for those with very bright or very dull backgrounds (or for those who simply prefer a more frosty or dull background)<br>
-<br>
 # Default/base theme
 ![image](https://user-images.githubusercontent.com/23534814/170810208-0aa54fc8-7b79-4271-892c-d1fd6afee7af.png)
 <br>
@@ -17,7 +15,7 @@ Includes 2 alternate background styles for those with very bright or very dull b
 # Alternate BG Style #2 + #1 (#2 must be above #1 in the themes list for this to work)
 ![image](https://user-images.githubusercontent.com/23534814/171307253-fbafee75-a17a-4ac8-b06b-e172a9b2e1e6.png)
 <br>
-# Full Changelist:
+# Full Changelist
 Change #1: Changed the font to Inter (font now included with the theme)<br>
 Change #2: Made the song info fade consistent regardless of window size, and generally made it nicer looking<br>
 Change #3: Changed the positioning of the fade based on whether or not the CAP / private session icon is present (and arranged icons vertically instead of horizontally to make this work)<br>

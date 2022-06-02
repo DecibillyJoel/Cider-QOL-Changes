@@ -13,7 +13,7 @@ A few QOL Cider changes, intended to make Cider feel smoother and sweeter (espec
 ![image](https://user-images.githubusercontent.com/23534814/171528907-a1f8feea-4cd5-4c06-8290-e854f9f63d63.png)
 <br>
 # Alternate BG Style #4: Light-Theme/Sugary/Poppy (artwork / Mica is almost completely undulled, extra shadows and panel colors)
-![image](https://user-images.githubusercontent.com/23534814/171606135-40489ed6-4a17-4965-8aac-45f84502d1be.png)
+![image](https://user-images.githubusercontent.com/23534814/171751147-6a333398-ea47-4f1d-a98c-240a0067eb9c.png)
 <br>
 # Alternate BG Style #2 + #1 (#2 must be above #1 in the themes list for this to work)
 ![image](https://user-images.githubusercontent.com/23534814/171307253-fbafee75-a17a-4ac8-b06b-e172a9b2e1e6.png)

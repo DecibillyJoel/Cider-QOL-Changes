@@ -10,11 +10,12 @@ html, body, :root, div#app, .lyric-body, .lyrics-translation, div#captions {
     --bs-font-monospace: var(--QOLfont); /* #1 */
     --keyColor: #fc3c44; /* #8 */
     --keyColor-primary: #ff2b52a6; /* #8 */
+    color: var(--textColor); /* #8 */
 }
 
 
 /* Change #2: Made the song info fade consistent regardless of window size, and generally made it nicer looking */	
-/* Change #3: Changed the positioning of the fade based on whether or not the CAP / spatializiation icon is present */	
+/* Change #3: Changed the positioning of the fade based on whether or not the CAP / private session icon is present (and arranged icons vertically instead of horizontally to make this work) */	
 /* Change #4: Why is there a max width on the song info???? just why?? stop it. get some help */	
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-name,
 .app-chrome.chrome-bottom .song-artist, 
@@ -22,13 +23,20 @@ html, body, :root, div#app, .lyric-body, .lyrics-translation, div#captions {
     width: 100%; /* #2 */
     max-width: 100%; /* 2, #4 */
     white-space: nowrap; /* #2 */
-    -webkit-mask-image: linear-gradient(-90deg, transparent 0px, transparent 7px, black 21px); /* #2 */	
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 7px, black 26px); /* #2 */	
 }
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-name:where(:nth-last-child(1n+4)),
 .app-chrome.chrome-bottom .song-artist:where(:nth-last-child(1n+3)),
 .app-chrome.chrome-bottom .song-album:where(:nth-last-child(1n+2)) {	
-     width: calc(100% - 20px); /* #3 */	
-    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 2px, black 16px); /* #2, #3 */	
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 19px, black 38px); /* #2, #3 */	
+}
+.app-chrome .app-chrome-item > .app-playback-controls .chrome-icon-container {
+    height: 100%; /* #3 */
+    flex-direction: column-reverse; /* #3 */
+    justify-content: space-evenly; /* #3 */
+}
+.app-chrome .app-chrome-item > .app-playback-controls .audio-type {
+    flex: unset; /* #3 */
 }
 
 
@@ -61,7 +69,7 @@ html, body, :root, div#app {
     --baseColorMix: rgba(30, 30, 30, 0.5); /* #8 */
     --sidebarColor: #2e2e2e; /* #8 */
     --sidebarColorMix: rgba(46, 46, 46, 0.5); /* #8 */
-    --ciderColor: #ff2654; /* #8 */
+    --ciderColor: var(--keyColor); /* #8 */
     background: transparent; /* #8 */
     color: var(--textColor); /* #8 */
 }
@@ -88,7 +96,7 @@ html, body, :root, div#app {
     background-color: var(--baseColor); /* #7 */
 }
 .bg-artwork-container + .bg-artwork--placeholder {
-    z-index: -2 !important; /* #7 */
+    z-index: -2; /* #7 */
 }
 .list-group-item-dark {
     background-color: rgba(45, 45, 45, 0.25); /* #7 */
@@ -106,16 +114,18 @@ html, body, :root, div#app {
     background-color: rgba(0, 0, 0, 0.15); /* #7 */
 }
 .app-chrome .app-chrome-item > .window-controls > div:hover {
-    background-color: rgba(200, 200, 200, 0.2) !important; /* #7 */
+    background-color: rgba(200, 200, 200, 0.2); /* #7 */
 }
 .installed-themes-page .repo-header, .installed-plugins-page .list-group-item.applied {
     background-color: rgba(36, 36, 36, 0.4); /* #7 */
 }
 .search-input {
+    color: var(--textColor);
     background-color: rgba(120, 120, 120, 0.35); /* #7 */
 }
 .search-input::placeholder {
-    color: rgb(175, 175, 175); /* #7 */
+    color: var(--textColor); /* #7 */
+    opacity: 0.6; /* #7 */
 }
 .search-input--icon {
     opacity: 0.6; /* #7 */
@@ -128,7 +138,9 @@ html, body, :root, div#app {
     opacity: 1; /* #7 */
     filter: brightness(92%); /* #7 */
 }
-
+.reasonSP {
+    color: var(--textColor); /* #7 */
+}
 
 /* Change #8: Prevent other themes from dulling the background or messing up the colors */
 #app-sidebar, .playlist-page .playlist-body {
@@ -136,6 +148,9 @@ html, body, :root, div#app {
 }
 #app-content, .installed-themes-page .style-editor-container, .github-themes-page .github-preview, .app-sidebar-footer.collapseTab > button {
     background-color: var(--panelColor2); /* #8 */
+}
+.app-sidebar-item {
+    color: var(--textColor); /* #8 */
 }
 
 

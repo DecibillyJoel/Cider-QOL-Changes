@@ -20,7 +20,7 @@ Includes 2 alternate background styles for those with very bright or very dull b
 # Full Changelist:
 Change #1: Changed the font to Inter (font now included with the theme)<br>
 Change #2: Made the song info fade consistent regardless of window size, and generally made it nicer looking<br>
-Change #3: Changed the positioning of the fade based on whether or not the CAP / spatializiation icon is present<br>
+Change #3: Changed the positioning of the fade based on whether or not the CAP / private session icon is present (and arranged icons vertically instead of horizontally to make this work)<br>
 Change #4: Removed max width on the song info<br>
 Change #5: Repositioned playback controls vertically<br>
 Change #6: Repositioned song duration text vertically (goes in hand with #5)<br>

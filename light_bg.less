@@ -21,7 +21,7 @@ svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chro
 .app-chrome .app-chrome-item > .app-playback-controls > div#artworkLCD {
     filter: drop-shadow(2.2px 2.2px 1.1px black);
 }
-.content-inner .cd-mediaitem-square:not(.mediaitem-card) {
+.content-inner .cd-mediaitem-square:not(.mediaitem-card), .app-sidebar-content {
     filter: drop-shadow(1.2px 1.2px 0.7px rgba(0, 0, 0, 0.5));
 }
 .content-inner .cd-mediaitem-square:not(.mediaitem-card) .artwork-container {
@@ -39,11 +39,14 @@ svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chro
 .well * {
     text-shadow: 1.3px 2.2px black; /* */
 }
-.well .artwork, .well .info-rect, .app-sidebar-content {
+.well .artwork, .well .info-rect {
     filter: drop-shadow(1.5px 1.5px 1.4px rgba(0, 0, 0, 0.75));
 }
 .cd-mediaitem-list-item .subtitle, .cd-mediaitem-square .subtitle {
     opacity: 0.82;
+}
+.cd-mediaitem-list-item:hover:not(.mediaitem-selected) {
+    background-color: var(--color1);
 }
 .audio-type {
     filter: contrast(0%) brightness(165%) drop-shadow(1px 2px 0.5px black);

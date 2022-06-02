@@ -2,7 +2,7 @@ div#app:where(:not(.simplebg)) {
     background: transparent;
 }
 
-div#app:not(.simplebg):before {
+div#app:before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -13,7 +13,7 @@ div#app:not(.simplebg):before {
     filter: saturate(275%) brightness(70%) blur(10000px);
 }
 
-div#app:not(.simplebg):after {
+div#app:after {
     content: "";
     display: inline-block;
     position: absolute;

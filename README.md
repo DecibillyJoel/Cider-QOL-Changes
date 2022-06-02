@@ -1,6 +1,4 @@
 A few QOL Cider changes, intended to make Cider feel smoother and sweeter (especially with *Mica* or *Artwork BGs*, or *another theme combined with Alt BG #3*)<br>
-Includes 2 alternate background styles for those with very bright or very dull backgrounds (or for those who simply prefer a more frosty or dull background)<br>
-<br>
 # Default/base theme
 ![image](https://user-images.githubusercontent.com/23534814/170810208-0aa54fc8-7b79-4271-892c-d1fd6afee7af.png)
 <br>

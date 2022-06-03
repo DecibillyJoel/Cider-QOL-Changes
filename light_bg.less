@@ -6,8 +6,10 @@ html, body, :root, div#app {
     --textColor: white;
      color: var(--textColor);
 }
-
-*:not(.close) {
+div#app {
+    background: transparent;
+}
+* {
     /*text-shadow: 1.15px 0px 1.1px rgba(0, 0, 0, 0.8), 0px 1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px 0px 1.1px rgba(0, 0, 0, 0.8), 0px -1.15px 1.1px rgba(0, 0, 0, 0.8), 1.15px 1.15px 1.1px rgba(0, 0, 0, 0.8), 1.15px -1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px 1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px -1.15px 1.1px rgba(0, 0, 0, 0.8); /* */
     text-shadow: 
         -0.4px -0.4px 0 black,
@@ -18,16 +20,27 @@ html, body, :root, div#app {
          0      0.4px 0 black,
         -0.4px  0.4px 0 black,
         -0.4px  0     0 black,
-        -0.85px -0.85px 0 black,
-         0     -0.85px 0 black,
-         0.85px -0.85px 0 black,
-         0.85px  0     0 black,
-         0.85px  0.85px 0 black,
-         0      0.85px 0 black,
-        -0.85px  0.85px 0 black,
-        -0.85px  0     0 black;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: subpixel-antialiased;
+        -0.7px -0.7px 0 black,
+         0     -0.7px 0 black,
+         0.7px -0.7px 0 black,
+         0.7px  0     0 black,
+         0.7px  0.7px 0 black,
+         0      0.7px 0 black,
+        -0.7px  0.7px 0 black,
+        -0.7px  0     0 black,
+        -1px -1px 0 black,
+         0     -1px 0 black,
+         1px -1px 0 black,
+         1px  0     0 black,
+         1px  1px 0 black,
+         0      1px 0 black,
+        -1px  1px 0 black,
+        -1px  0     0 black;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: none;
+}
+.close {
+    text-shadow: 0 0 0 transparent;
 }
 .artist, .title, .artist > .item-navigate, .title > .item-navigate, .song-name, .song-artist, .song-album, .repo-name {
     overflow-y: visible;
@@ -127,15 +140,13 @@ svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chro
 }
 
 #micaEffect {
-    filter: brightness(95%) saturate(190%) contrast(130%);
+    filter: brightness(95%) saturate(250%) contrast(120%);
 }
 .bg-artwork-container {
-    filter: brightness(95%);
+    filter: brightness(95%) saturate(250%) contrast(140%) blur(200px);
+    backdrop-filter: blur(200px);
 }
 .fullscreen-view-container .bg-artwork-container, .modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container {
-    filter: brightness(95%);
-    transform: scale(108%, 108%);
-}
-.bg-artwork, .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork, .app-drawer .bgArtworkMaterial .bg-artwork-container .bg-artwork {
-    filter: blur(180px) saturate(190%) contrast(130%);
+    filter: brightness(95%) saturate(110%) contrast(110%) blur(200px);
+    backdrop-filter: blur(200px);
 }

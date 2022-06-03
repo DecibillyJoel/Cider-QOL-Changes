@@ -8,14 +8,31 @@ html, body, :root, div#app {
 }
 
 *:not(.close) {
-    text-shadow: 1.15px 0px 1.1px rgba(0, 0, 0, 0.8), 0px 1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px 0px 1.1px rgba(0, 0, 0, 0.8), 0px -1.15px 1.1px rgba(0, 0, 0, 0.8), 1.15px 1.15px 1.1px rgba(0, 0, 0, 0.8), 1.15px -1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px 1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px -1.15px 1.1px rgba(0, 0, 0, 0.8); /* */
+    /*text-shadow: 1.15px 0px 1.1px rgba(0, 0, 0, 0.8), 0px 1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px 0px 1.1px rgba(0, 0, 0, 0.8), 0px -1.15px 1.1px rgba(0, 0, 0, 0.8), 1.15px 1.15px 1.1px rgba(0, 0, 0, 0.8), 1.15px -1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px 1.15px 1.1px rgba(0, 0, 0, 0.8), -1.15px -1.15px 1.1px rgba(0, 0, 0, 0.8); /* */
+    text-shadow: 
+        -0.4px -0.4px 0 black,
+         0     -0.4px 0 black,
+         0.4px -0.4px 0 black,
+         0.4px  0     0 black,
+         0.4px  0.4px 0 black,
+         0      0.4px 0 black,
+        -0.4px  0.4px 0 black,
+        -0.4px  0     0 black,
+        -0.85px -0.85px 0 black,
+         0     -0.85px 0 black,
+         0.85px -0.85px 0 black,
+         0.85px  0     0 black,
+         0.85px  0.85px 0 black,
+         0      0.85px 0 black,
+        -0.85px  0.85px 0 black,
+        -0.85px  0     0 black;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 .artist, .title, .artist > .item-navigate, .title > .item-navigate, .song-name, .song-artist, .song-album, .repo-name {
     overflow-y: visible;
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-left: 1.5px;
+    padding-right: 1.5px;
 }
 .artist::-webkit-scrollbar, .title::-webkit-scrollbar, .artist > .item-navigate::-webkit-scrollbar, .title > .item-navigate::-webkit-scrollbar {
     display: none;
@@ -69,6 +86,21 @@ svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chro
 .nav-pills .nav-link.active {
     text-shadow: 0px 0.85px 0.85px rgba(0, 0, 0, 0.85);
 }
+.nav-pills:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(100, 100, 100, 0.25);
+    border-radius: 50px;
+    z-index: 0;
+    pointer-events: none;
+}
+.nav-pills:after {
+    display: none;
+}
 .search-input {
     color: var(--textColor);
     background-color: rgba(120, 120, 120, 0.35);
@@ -79,6 +111,13 @@ svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chro
 }
 .cd-btn-seeall {
     filter: saturate(150%) contrast(80%) brightness(200%);
+}
+.playlist-page .playlist-time {
+    filter: saturate(160%) contrast(90%) brightness(95%);
+    opacity: 1;
+}
+.playlist-page .playlist-time.showExtended {
+    filter: saturate(160%) contrast(80%) brightness(125%);
 }
 .home-page .md-btn-replay {
     filter: saturate(130%) contrast(125%) brightness(105%);

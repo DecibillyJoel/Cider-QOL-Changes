@@ -18,16 +18,16 @@ html, body, :root, div#app, .lyric-body, .lyrics-translation, div#captions {
 /* Change #3: Changed the positioning of the fade based on whether or not the CAP / private session icon is present (and arranged icons vertically instead of horizontally to make this work) */	
 /* Change #4: Why is there a max width on the song info???? just why?? stop it. get some help */	
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-name,
-.app-chrome.chrome-bottom .song-artist, 
-.app-chrome.chrome-bottom .song-album {	
+#app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-artist, 
+#app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-album {	
     width: 100%; /* #2 */
     max-width: 100%; /* 2, #4 */
     white-space: nowrap; /* #2 */
     -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 7px, black 26px); /* #2 */	
 }
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-name:where(:nth-last-child(1n+4)),
-.app-chrome.chrome-bottom .song-artist:where(:nth-last-child(1n+3)),
-.app-chrome.chrome-bottom .song-album:where(:nth-last-child(1n+2)) {	
+#app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-artist:where(:nth-last-child(1n+3)),
+#app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-album:where(:nth-last-child(1n+2)) {	
     -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 19px, black 38px); /* #2, #3 */	
 }
 .app-chrome .app-chrome-item > .app-playback-controls .chrome-icon-container {

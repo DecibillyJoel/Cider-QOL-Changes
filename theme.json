@@ -24,6 +24,11 @@
             "name": "Cider QOL Changes: Alt BG #4 (Light-Theme/Sugary/Poppy)",
             "description": "Makes the background completely unrestrained",
             "file": "light_bg.less"
+        },
+        {
+            "name": "Cider QOL Changes: Force Default Cider Button (Top Left)",
+            "description": "Forces the icon of the top left Cider Button to remain the default",
+            "file": "cider_button.less"
         }
     ]
 }

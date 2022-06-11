@@ -3,7 +3,6 @@
     "description": "QOL changes",
     "version": "1.0",
     "author": "DecibillyJoel",
-    "github_repo": "DecibillyJoel/Cider-QOL-Changes",
     "pack": [
         {
             "name": "Cider QOL Changes: Alt BG #1 (Blurrier/Smoother/Frostier)",

@@ -4,14 +4,6 @@
     "version": "1.0",
     "author": "DecibillyJoel",
     "github_repo": "DecibillyJoel/Cider-QOL-Changes",
-    "directives": {
-        "windowLayout": {
-            "value": "twopanel"
-        },
-        "lcdArtworkSize": {
-            "value": 100
-        }
-    },
     "pack": [
         {
             "name": "Cider QOL Changes: Alt BG #1 (Blurrier/Smoother/Frostier)",

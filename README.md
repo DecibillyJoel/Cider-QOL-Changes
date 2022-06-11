@@ -30,3 +30,5 @@ Change #8: Prevented other themes from dulling the background or messing up the 
 Change #9: Prevented other themes from changing the window controls style<br>
 Change #10: Fixed the search hints transparency and positioning<br>
 Change #11: Fixed the playlist name/description edit positioning and size
+
+*Notice: Both Maverick and Mojave window layouts are supported, but the theme is constructed primarily with Mojave in mind.*

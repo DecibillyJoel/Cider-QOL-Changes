@@ -21,24 +21,50 @@ html, body, :root, div#app, .lyric-body, .lyrics-translation, div#captions {
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-artist, 
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-album {	
     width: 100%; /* #2 */
-    max-width: 100%; /* 2, #4 */
+    max-width: 100%; /* #2, #4 */
     white-space: nowrap; /* #2 */
-    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 7px, black 26px); /* #2 */	
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 4px, black 21px); /* #2 */
 }
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-name:where(:nth-last-child(1n+4)),
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-artist:where(:nth-last-child(1n+3)),
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-album:where(:nth-last-child(1n+2)) {	
     -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 19px, black 38px); /* #2, #3 */	
 }
-.app-chrome .app-chrome-item > .app-playback-controls .chrome-icon-container {
+.app-chrome .app-chrome-item > .app-playback-controls .song-name:where(:not(#app.twopanel .song-name)) {
+    width: 100%; /* #2 */
+    max-width: 100%; /* #2, #4 */
+}
+.app-chrome .app-chrome-item > .app-playback-controls .song-artist-album:where(:not(#app.twopanel .song-artist-album)) {
+    width: calc(100% - 54px); /* #2 */
+    max-width: 100%; /* #2, #4 */
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent -1px, black 5px); /* #2, #3 */
+}
+.app-chrome .app-chrome-item > .app-playback-controls .info-rect:where(:not(#app.twopanel .info-rect)) {
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 19px, black 38px, black calc(100% - 38px), transparent calc(100% - 19px), transparent calc(100% + 20px)); /* #2, #3 */	
+}
+.app-chrome .app-chrome-item > .app-playback-controls .info-rect:where(:not(#app.twopanel .chrome-icon-container).chrome-icon-container:empty + .info-rect) {
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 4px, black 23px, black calc(100% - 23px), transparent calc(100% - 4px), transparent calc(100% + 20px)); /* #2 */
+}
+.app-chrome .app-chrome-item > .app-playback-controls .chrome-icon-container:where(#app.twopanel .chrome-icon-container) {
     height: 100%; /* #3 */
     flex-direction: column-reverse; /* #3 */
     justify-content: space-evenly; /* #3 */
 }
+.app-chrome .app-chrome-item > .app-playback-controls .chrome-icon-container:where(:not(#app.twopanel .chrome-icon-container)) {
+    width: 100%; /* #3 */
+    justify-content: flex-end; /* #3 */
+    margin-bottom: 15px; /* #3 */
+}
 .app-chrome .app-chrome-item > .app-playback-controls .audio-type {
     flex: unset; /* #3 */
+    margin: 0; /* #3 */
 }
-
+.app-chrome .app-chrome-item > .app-playback-controls .ppe-icon:where(:not(#app.twopanel .ppe-icon)) {
+    margin-left: calc(100% - 32px) !important;
+}
+.app-chrome .app-chrome-item > .app-playback-controls .private-icon:where(:not(#app.twopanel .private-icon)) {
+    margin-left: 2px !important;
+}
 
 /* Change #5: Reposition playback controls vertically */	
 .app-chrome.chrome-bottom .app-chrome-playback-controls {	
@@ -170,13 +196,21 @@ html, body, :root, div#app {
 
 
 /* Change #10: Fix the search hints transparency and positioning */
-.search-hints-container .search-hints {
+.search-hints-container .search-hints:where(#app.twopanel .search-hints) {
     background-color: #1e1e1ecf; /* #10 */
 }
-.search-hints-container {
+.search-hints-container:where(#app.twopanel .search-hints-container) {
     left: calc(-10px - (var(--sidebarWidth) - 20px)*0.125); /* #10 */
 }
-
+.app-sidebar-header .search-input-container .search-hints-container:where(:not(#app.twopanel .search-hints-container)), .search-hints-container .search-hints:where(:not(#app.twopanel .search-hints)) {
+    padding-left: 0px; /* #10 */
+    padding-right: 0px; /* #10 */
+    width: 100%; /* #10 */
+}
+.search-hints-container .search-hints .search-hint:where(:not(#app.twopanel .search-hint)) {
+    width: calc(100% - 12px); /* #10 */
+    margin-left: 6px; /* #10 */
+}
 
 /* Change #11: Fix the playlist name/description edit positioning and size */
 .nameEdit {

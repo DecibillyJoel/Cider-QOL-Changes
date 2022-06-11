@@ -23,12 +23,12 @@ html, body, :root, div#app, .lyric-body, .lyrics-translation, div#captions {
     width: 100%; /* #2 */
     max-width: 100%; /* #2, #4 */
     white-space: nowrap; /* #2 */
-    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 4px, black 21px); /* #2 */
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 4px, black 21px) !important; /* #2 */
 }
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-name:where(:nth-last-child(1n+4)),
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-artist:where(:nth-last-child(1n+3)),
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-album:where(:nth-last-child(1n+2)) {	
-    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 19px, black 38px); /* #2, #3 */	
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 19px, black 38px) !important; /* #2, #3 */	
 }
 .app-chrome .app-chrome-item > .app-playback-controls .song-name:where(:not(#app.twopanel .song-name)) {
     width: 100%; /* #2 */
@@ -37,13 +37,13 @@ html, body, :root, div#app, .lyric-body, .lyrics-translation, div#captions {
 .app-chrome .app-chrome-item > .app-playback-controls .song-artist-album:where(:not(#app.twopanel .song-artist-album)) {
     width: calc(100% - 54px); /* #2 */
     max-width: 100%; /* #2, #4 */
-    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent -1px, black 5px); /* #2, #3 */
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent -1px, black 5px) !important; /* #2, #3 */
 }
 .app-chrome .app-chrome-item > .app-playback-controls .info-rect:where(:not(#app.twopanel .info-rect)) {
-    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 19px, black 38px, black calc(100% - 38px), transparent calc(100% - 19px), transparent calc(100% + 20px)); /* #2, #3 */	
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 19px, black 38px, black calc(100% - 38px), transparent calc(100% - 19px), transparent calc(100% + 20px)) !important; /* #2, #3 */	
 }
 .app-chrome .app-chrome-item > .app-playback-controls .info-rect:where(:not(#app.twopanel .chrome-icon-container).chrome-icon-container:empty + .info-rect) {
-    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 4px, black 23px, black calc(100% - 23px), transparent calc(100% - 4px), transparent calc(100% + 20px)); /* #2 */
+    -webkit-mask-image: linear-gradient(-90deg, transparent -20px, transparent 4px, black 23px, black calc(100% - 23px), transparent calc(100% - 4px), transparent calc(100% + 20px)) !important; /* #2 */
 }
 .app-chrome .app-chrome-item > .app-playback-controls .chrome-icon-container:where(#app.twopanel .chrome-icon-container) {
     height: 100%; /* #3 */
@@ -54,13 +54,16 @@ html, body, :root, div#app, .lyric-body, .lyrics-translation, div#captions {
     width: 100%; /* #3 */
     justify-content: flex-end; /* #3 */
     margin-bottom: 15px; /* #3 */
+    right: 0px !important; /* #3 */ /* iTheme compatibility lmao */
+    left: 0px !important; /* #3 */
 }
 .app-chrome .app-chrome-item > .app-playback-controls .audio-type {
     flex: unset; /* #3 */
     margin: 0; /* #3 */
 }
 .app-chrome .app-chrome-item > .app-playback-controls .ppe-icon:where(:not(#app.twopanel .ppe-icon)) {
-    margin-left: calc(100% - 32px) !important;
+    margin-right: 2px !important;
+    margin-left: calc(100% - 34px) !important;
 }
 .app-chrome .app-chrome-item > .app-playback-controls .private-icon:where(:not(#app.twopanel .private-icon)) {
     margin-left: 2px !important;

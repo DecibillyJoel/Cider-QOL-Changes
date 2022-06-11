@@ -109,14 +109,14 @@ html, body, :root, div#app {
     filter: blur(180px) saturate(190%) contrast(130%); /* #7 */
 }
 #micaEffect {
-    filter: brightness(53%) saturate(300%) contrast(130%); /* #7 */
+    filter: brightness(53%) saturate(300%) contrast(130%) !important; /* #7 */
     backdrop-filter: blur(200px); /* #7 */
     transform: scale(108%, 108%); /* #7 */
     opacity: 1; /* #8 */
     z-index: -3 !important; /* #7 */
 }
-.bg-artwork-container {
-    filter: brightness(53%) saturate(300%) contrast(150%) blur(200px); /* #7 */
+.bg-artwork-container:where(:not(.fullscreen-view-container .bg-artwork-container)):where(:not(.modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container)) {
+    filter: brightness(53%) saturate(300%) contrast(150%) blur(200px) !important; /* #7 */
     backdrop-filter: blur(200px); /* #7 */
     transform: scale(108%, 108%); /* #7 */  
 }

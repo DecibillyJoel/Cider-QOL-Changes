@@ -140,10 +140,10 @@ svg, .search-input--icon, .svg-icon, .menu-btn, .play-btn, .app-chrome:not(.chro
 }
 
 #micaEffect {
-    filter: brightness(95%) saturate(250%) contrast(120%);
+    filter: brightness(95%) saturate(250%) contrast(120%) !important;
 }
-.bg-artwork-container {
-    filter: brightness(95%) saturate(250%) contrast(140%) blur(200px);
+.bg-artwork-container:where(:not(.fullscreen-view-container .bg-artwork-container)):where(:not(.modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container)) {
+    filter: brightness(95%) saturate(250%) contrast(140%) blur(200px) !important;
     backdrop-filter: blur(200px);
 }
 .fullscreen-view-container .bg-artwork-container, .modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container {

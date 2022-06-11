@@ -2,10 +2,10 @@ div#app {
     background: transparent;
 }
 #micaEffect {
-    filter: brightness(53%) saturate(400%) contrast(170%) blur(90px) blur(20px);
+    filter: brightness(53%) saturate(400%) contrast(170%) blur(90px) blur(20px) !important;
 }
-.bg-artwork-container {
-    filter: brightness(53%) saturate(400%) contrast(170%) blur(300px) blur(20px); 
+.bg-artwork-container:where(:not(.fullscreen-view-container .bg-artwork-container)):where(:not(.modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container)) {
+    filter: brightness(53%) saturate(400%) contrast(170%) blur(300px) blur(20px) !important; 
 }
 .fullscreen-view-container .bg-artwork-container, .modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container {
     filter: brightness(60%) saturate(300%) contrast(170%) grayscale(40%) blur(300px) blur(20px);

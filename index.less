@@ -106,23 +106,24 @@ html, body, :root, div#app {
     background-color: transparent; /* #7 */
 }
 .bg-artwork, .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork, .app-drawer .bgArtworkMaterial .bg-artwork-container .bg-artwork {
-    filter: blur(180px) saturate(190%) contrast(130%); /* #7 */
+    filter: blur(180px) saturate(190%) contrast(500%); /* #7 */
+    backdrop-filter: brightness(0); /* #7 */
 }
 #micaEffect {
     filter: saturate(320%) contrast(190%) brightness(41%) !important; /* #7 */
-    backdrop-filter: blur(200px); /* #7 */
+    backdrop-filter: brightness(0); /* #7 */
     transform: scale(108%, 108%); /* #7 */
     opacity: 1; /* #8 */
     z-index: -3 !important; /* #7 */
 }
 .bg-artwork-container:where(:not(.fullscreen-view-container .bg-artwork-container)):where(:not(.modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container)) {
     filter: saturate(300%) contrast(150%) blur(200px) brightness(50%) !important; /* #7 */
-    backdrop-filter: blur(200px); /* #7 */
+    backdrop-filter: brightness(0); /* #7 */
     transform: scale(108%, 108%); /* #7 */ 
 }
 .fullscreen-view-container .bg-artwork-container, .modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container {
     filter: saturate(300%) contrast(150%) blur(200px) brightness(58%); /* #7 */
-    backdrop-filter: blur(200px); /* #7 */
+    backdrop-filter: brightness(0); /* #7 */
     transform: scale(108%, 108%); /* #7 */
 }
 .bg-artwork--placeholder {

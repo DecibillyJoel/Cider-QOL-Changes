@@ -1,12 +1,10 @@
 div#app {
     background: transparent;
 }
+
+.bg-artwork, .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork, .app-drawer .bgArtworkMaterial .bg-artwork-container .bg-artwork {
+    filter: saturate(190%) brightness(200%) contrast(275%) blur(500px) contrast(90%);
+}
 #micaEffect {
-    filter: saturate(320%) contrast(190%) brightness(41%) blur(90px) blur(20px) contrast(85%) !important;
-}
-.bg-artwork-container:where(:not(.fullscreen-view-container .bg-artwork-container)):where(:not(.modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container)) {
-    filter: saturate(300%) contrast(150%) blur(200px) brightness(50%) blur(90px) blur(20px) contrast(85%) !important; 
-}
-.fullscreen-view-container .bg-artwork-container, .modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container {
-    filter: saturate(300%) contrast(150%) blur(200px) brightness(58%) blur(90px) blur(20px) contrast(85%);
+    filter: saturate(320%) contrast(190%) brightness(41%) blur(90px) blur(20px) contrast(90%) !important;
 }

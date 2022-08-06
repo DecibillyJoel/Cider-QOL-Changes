@@ -105,11 +105,28 @@ html, body, :root, div#app {
 #app-main, .app-navigation {
     background-color: transparent; /* #7 */
 }
-.bg-artwork, .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork, .app-drawer .bgArtworkMaterial .bg-artwork-container .bg-artwork {
-    filter: blur(180px) saturate(190%) brightness(200%) contrast(275%); /* #7 */
+.playlist-page .playlist-display .artworkContainer .artworkMaterial img {
+    isolation: isolate;
+    filter: saturate(300%) contrast(300%) blur(33px); /* #7 */
     backdrop-filter: brightness(0); /* #7 */
+    transition: unset !important; /* #7 */
+}
+.playlist-page .playlist-display .artworkContainer {
+    animation: unset; /* #7 */
+    -webkit-mask-image: radial-gradient(at top left, black, transparent 83%), radial-gradient(at top right, black, transparent 83%), linear-gradient(180deg, #c8c8c8, transparent 100%); /* #7 */
+}
+.bg-artwork, .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork, .app-drawer .bgArtworkMaterial .bg-artwork-container .bg-artwork {
+    isolation: isolate;
+    filter: saturate(190%) brightness(200%) contrast(275%) blur(200px); /* #7 */
+}
+.bg-artwork-container .bg-artwork.a {
+    animation-delay: -10s; /* #7 */
+}
+.bg-artwork-container .bg-artwork.b {
+    animation-delay: 0s; /* #7 */
 }
 #micaEffect {
+    isolation: isolate;
     filter: saturate(320%) contrast(190%) brightness(41%) !important; /* #7 */
     backdrop-filter: brightness(0); /* #7 */
     transform: scale(108%, 108%); /* #7 */
@@ -117,12 +134,14 @@ html, body, :root, div#app {
     z-index: -3 !important; /* #7 */
 }
 .bg-artwork-container:where(:not(.fullscreen-view-container .bg-artwork-container)):where(:not(.modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container)) {
-    filter: saturate(300%) contrast(150%) blur(200px) brightness(50%) !important; /* #7 */
+    isolation: isolate;
+    filter: saturate(300%) contrast(150%) brightness(50%) blur(33px) !important; /* #7 */
     backdrop-filter: brightness(0); /* #7 */
     transform: scale(108%, 108%); /* #7 */ 
 }
 .fullscreen-view-container .bg-artwork-container, .modular-fs .app-drawer .bgArtworkMaterial .bg-artwork-container {
-    filter: saturate(300%) contrast(150%) blur(200px) brightness(58%); /* #7 */
+    isolation: isolate;
+    filter: saturate(300%) contrast(150%) brightness(58%) blur(33px); /* #7 */
     backdrop-filter: brightness(0); /* #7 */
     transform: scale(108%, 108%); /* #7 */
 }

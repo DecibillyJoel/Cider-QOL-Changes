@@ -16,8 +16,8 @@
             "file": "clear_bg.less"
         },
         {
-            "name": "Cider QOL Changes: Alt BG #3 (Theme-Colored Tint)",
-            "description": "Makes the background tinted in your theme's colors",
+            "name": "Cider QOL Changes: Alt BG #3 (Accent-Colored Tint)",
+            "description": "Makes the background tinted by Cider's accent color",
             "file": "themecolored_bg.less"
         },
         {

@@ -8,7 +8,7 @@ A few QOL Cider changes, intended to make Cider feel smoother and sweeter (espec
 # Alternate BG Style #2: Darker/Duller/Layered
 ![image](https://user-images.githubusercontent.com/23534814/171307112-d38f5750-4813-41f2-a098-370eba875058.png)
 <br>
-# Alternate BG Style #3: Theme-Colored Tint (uses colors of dominant theme, or custom accent color in visual settings)
+# Alternate BG Style #3: Accent-Colored Tint (uses custom accent color in visual settings, or accent defined by a theme)
 ![image](https://user-images.githubusercontent.com/23534814/171530049-4b7fbb6b-5347-4b2b-b142-1f3f17fabc65.png)
 ![image](https://user-images.githubusercontent.com/23534814/171528907-a1f8feea-4cd5-4c06-8290-e854f9f63d63.png)
 <br>

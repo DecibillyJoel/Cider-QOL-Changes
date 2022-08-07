@@ -114,6 +114,7 @@ html, body, :root, div#app {
 .playlist-page .playlist-display .artworkContainer {
     animation: unset; /* #7 */
     -webkit-mask-image: radial-gradient(at top left, black, transparent 83%), radial-gradient(at top right, black, transparent 83%), linear-gradient(180deg, #c8c8c8, transparent 100%); /* #7 */
+    opacity: 1; /* #7 */
 }
 .bg-artwork, .fullscreen-view .background .bgArtworkMaterial .bg-artwork-container .bg-artwork, .app-drawer .bgArtworkMaterial .bg-artwork-container .bg-artwork {
     isolation: isolate;
@@ -249,4 +250,4 @@ html, body, :root, div#app {
 /* Change #12: Undo song title shrink change */
 #app.twopanel .app-chrome.chrome-bottom .app-chrome--left .playback-controls .playback-info .song-name {
     font-size: 0.98em;
-} 
+}

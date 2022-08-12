@@ -2,7 +2,7 @@ div#app:where(:not(.simplebg)) {
     background: transparent;
 }
 
-div#app:before, #micaEffect:before {
+div#app:before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -17,6 +17,10 @@ div#app:before, #micaEffect:before {
     pointer-events: none;
 }
 
-#micaEffect:before {
-    opacity: 0.15;
+div#app:where(:not(:has(> .bg-artwork-container))):before {
+    opacity: 0.175;
+}
+
+div#app:where(.simplebg):before {
+    opacity: 0.4375;
 }

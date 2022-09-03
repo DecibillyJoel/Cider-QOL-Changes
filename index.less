@@ -221,7 +221,7 @@ html, body, :root, div#app {
 
 /* Change #10: Fix the search hints transparency and positioning */
 .search-hints-container .search-hints:where(#app.twopanel .search-hints) {
-    background-color: #1e1e1ecf; /* #10 */
+    background-color: #1e1e1e; /* #10 */
 }
 .search-hints-container:where(#app.twopanel .search-hints-container) {
     left: calc(-10px - (var(--sidebarWidth) - 20px)*0.125); /* #10 */
@@ -234,6 +234,12 @@ html, body, :root, div#app {
 .search-hints-container .search-hints .search-hint:where(:not(#app.twopanel .search-hint)) {
     width: calc(100% - 12px); /* #10 */
     margin-left: 6px; /* #10 */
+}
+.search-hints-container {
+    background: unset; /* #10 */
+}
+.search-hints-container .search-hints {
+    animation: unset; /* #10 */
 }
 
 /* Change #11: Fix the playlist name/description edit positioning and size */

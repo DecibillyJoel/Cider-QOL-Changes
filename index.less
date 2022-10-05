@@ -106,6 +106,9 @@ html, body, :root, div#app {
 #app-main, .app-navigation {
     background-color: transparent; /* #7 */
 }
+.playlist-page .playlist-display {
+    position: absolute; /* #7 */ /* iTheme compatibility lmao */
+}
 .playlist-page .playlist-display .artworkContainer .artworkMaterial img {
     isolation: isolate;
     filter: saturate(115%) contrast(300%) brightness(63%) blur(33px); /* #7 */
@@ -113,7 +116,6 @@ html, body, :root, div#app {
     transition: unset !important; /* #7 */
 }
 .playlist-page .playlist-display .artworkContainer {
-    position: absolute; /* #7 */
     animation: unset; /* #7 */
     -webkit-mask-image: radial-gradient(at top left, black, transparent 83%), radial-gradient(at top right, black, transparent 83%), linear-gradient(180deg, #c8c8c8, transparent 100%); /* #7 */
     opacity: 1; /* #7 */

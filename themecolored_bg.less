@@ -15,14 +15,14 @@ div#app:before {
     mix-blend-mode: screen;
     background-blend-mode: screen;
     isolation: isolate;
-    filter: saturate(167%) brightness(92%);
+    filter: saturate(167%) brightness(90%);
     pointer-events: none;
 }
 
 div#app:where(:not(:has(> .bg-artwork-container))):before {
-    opacity: 0.175;
+    opacity: 0.225;
 }
 
 div#app:where(.simplebg):before {
-    opacity: 0.4375;
+    opacity: 0.5;
 }
